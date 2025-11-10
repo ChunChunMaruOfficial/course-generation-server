@@ -1,56 +1,35 @@
 const express = require('express');
-const { OpenAI } = require('openai');
 require('dotenv').config();
 const cors = require('cors');
-const examples = require('./data/examples.json');
-const promts = require('./data/promts.json');
-const apiKey = process.env.apikey;
+
+const GETmethod = require('./GetMethod.js')
+const POSTmethod = require('./PostMethod.js')
 
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-let course
+let courses = []
 
 const app = express();
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
-const handleGenerate = async (req, res, prompt) => {
-  console.log("Промт: ", req.body.topic);
-  req.body.answers && console.log("Ответы: ", req.body.answers);
-  console.log(prompt);
-
-  const response = await client.chat.completions.create({
-    model: 'sonar-pro',
-    messages: [{ role: 'user', content: prompt + req.body.topic }]
-  });
-
-  const result = response.choices[0].message.content;
-  course = result;
-  res.json({ result });
-};
-
-const client = new OpenAI({
-  apiKey: apiKey,
-  baseURL: 'https://api.perplexity.ai'
-});
-
-app.post('/api/generateCourse', (req, res) => {
-  handleGenerate(req, res, promts.mainpromt);
-});
-app.get('/course', (req, res) => {
-  console.log('/course');
+// Ваш исходный middleware подход (должен работать)
+app.use((req, res) => {
+  console.log('Request body:', req.body);
   
-  res.json({ result: course ?? 'простите , курс еще не сгенерирован' });
-});
-
-app.post('/api/generateQuestions', (req, res) => {
-  handleGenerate(req, res, promts.questionpromt);
-});
-
-app.post('/getexample', (_, res) => {
-  res.json({ result: examples })
+  switch (req.method) {
+    case "GET":          
+      GETmethod(req, res, courses);
+      break;
+    case "POST":            
+      POSTmethod(req, res, courses);
+      break;
+    default:
+      res.status(405).send('Method not allowed');
+      break;
+  }
 });
 
 app.listen(3000, () => {
