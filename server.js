@@ -21,7 +21,7 @@ app.use((req, res) => {
   
   switch (req.method) {
     case "GET":          
-      GETmethod(req, res, courses);
+      GETmethod(req, res);
       break;
     case "POST":            
       POSTmethod(req, res, courses);
