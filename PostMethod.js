@@ -3,7 +3,9 @@ const apiKey = process.env.apikey;
 const { OpenAI } = require('openai');
 const fs = require('fs');
 const courses = JSON.parse(fs.readFileSync('data/courses.json', 'utf-8'));
-
+const users = JSON.parse(fs.readFileSync('data/users.json', 'utf-8'));
+const bcrypt = require('bcrypt');
+const saltRounds = 12;
 
 
 
@@ -24,10 +26,7 @@ const handleGenerate = async (req, res, prompt) => {
 
     let result = response.choices[0].message.content
 
-        console.log(result);
-        
-
-
+    console.log(result);
 
     if (req.path !== '/api/generateexplanation') {
         result = JSON.parse(result.trim().replaceAll('`', '').replace('json', '').trim())
@@ -39,6 +38,33 @@ const handleGenerate = async (req, res, prompt) => {
 
     res.json({ result });
 };
+
+
+async function logincheck(req, res) {
+    console.log(req.body);
+    
+    const user = users.find(v => v.email == req.body.email)
+    if (!user) {
+        return res.status(401).json({ answer: 'вы не зарегистрированы' });
+    }
+    const isPasswordValid = await bcrypt.compare(req.body.password, user.password);
+
+    if (!isPasswordValid) {
+        return res.status(401).json({ answer: 'пароль неверный' });
+    }
+    return res.status(200).json({ answer: 'Успешный вход', user: { id: user.id, email: user.email } });
+}
+
+async function registration(req, res) {
+    if (users.find(v => v.email == req.body.email)) {
+        return res.status(409).json({ answer: 'пользователь с такой почтой уже есть' })
+    }
+    const hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
+    const id = Date.now()
+    users.push({ email: req.body.email, password: hashedPassword, id: id, date: Date().toLocaleDateString('ru-RU') })
+    fs.writeFileSync('data/users.json', JSON.stringify(users, null, 2), 'utf-8');
+    return res.status(200).json({ answer: 'Успешная регистрация', user: { id: id, email: req.body.email } });
+}
 
 function POSTmethod(req, res, courses) {
     switch (req.path) {
@@ -61,7 +87,10 @@ function POSTmethod(req, res, courses) {
             handleGenerate(req, res, promts.practice, courses);
             break;
         case '/login':
-            
+            logincheck(req, res)
+            break;
+        case '/registration':
+            registration(req, res)
             break;
     }
 }
