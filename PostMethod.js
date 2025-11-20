@@ -29,7 +29,7 @@ const handleGenerate = async (req, res, prompt) => {
     console.log(result);
 
     if (req.path !== '/api/generateexplanation') {
-        result = JSON.parse(result.trim().replaceAll('`', '').replace('json', '').trim())
+        result = JSON.parse(result.trim().replaceAll('`', '"').replace(/\s+/g, " ").trim().replace(/[\t\n\r]/g, "").replace('json', '').trim())
     }
     if (req.path === '/api/generateFastCourse') {
         courses.push(result);
@@ -61,7 +61,7 @@ async function registration(req, res) {
     }
     const hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
     const id = Date.now()
-    users.push({ email: req.body.email, password: hashedPassword, id: id, date: Date().toLocaleDateString('ru-RU') })
+    users.push({ email: req.body.email, password: hashedPassword, id: id, date: Date().toLocaleDateString('ru-RU'), courses: courses, days: [] })
     fs.writeFileSync('data/users.json', JSON.stringify(users, null, 2), 'utf-8');
     return res.status(200).json({ answer: 'Успешная регистрация', user: { id: id, email: req.body.email } });
 }

@@ -2,7 +2,9 @@
   {
     "email": "c4erkaoui@gmail.com",
     "password": "$2b$12$KHtHQpPdLWHjBbhFdp7nCOy2xgCB0qkU.2uXmFL79U9wOXDKOrjbq",
-    "id": 1763363978712
+    "id": 1763363978712,
+    "courses": [],
+    "days": []
   },
   {
     "email": "c4erki@gmail.com",
