@@ -6,7 +6,7 @@ const courses = JSON.parse(fs.readFileSync('data/courses.json', 'utf-8'));
 const users = JSON.parse(fs.readFileSync('data/users.json', 'utf-8'));
 const bcrypt = require('bcrypt');
 const saltRounds = 12;
-
+const formatter = require('./formatter')
 
 
 const client = new OpenAI({
@@ -29,7 +29,11 @@ const handleGenerate = async (req, res, prompt) => {
     console.log(result);
 
     if (req.path !== '/api/generateexplanation') {
-        result = JSON.parse(result.trim().replaceAll('`', '"').replace(/\s+/g, " ").trim().replace(/[\t\n\r]/g, "").replace('json', '').trim())
+        //result = JSON.parse(result.trim().replaceAll('`', '"').replace(/\s+/g, " ").trim().replace(/[\t\n\r]/g, "").replace('json', '').trim())
+
+        const formattext = new formatter(result);
+        result = formattext.parse();
+
     }
     if (req.path === '/api/generateFastCourse') {
         courses.push(result);
@@ -42,7 +46,7 @@ const handleGenerate = async (req, res, prompt) => {
 
 async function logincheck(req, res) {
     console.log(req.body);
-    
+
     const user = users.find(v => v.email == req.body.email)
     if (!user) {
         return res.status(401).json({ answer: 'вы не зарегистрированы' });
