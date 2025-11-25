@@ -19,9 +19,21 @@ const handleGenerate = async (req, res, prompt) => {
 
     req.body.answers && console.log("Ответы: ", req.body.answers);
 
+    if (req.path !== '/api/generateLesson' && req.path !== '/api/generatePractice') {
+        prompt = prompt + req.body.topic
+    }
+
+    if (req.path === '/api/generatePractice') {
+        prompt = prompt.replace('{{topic}}', req.body.topic).replace('{{highlights}}', req.body.highlights).replace('{{previous_practice}}', req.body.previous_practice ?? 'This information can be omitted.')
+    }
+
+    if (req.path === '/api/generateLesson') {
+        prompt = prompt.replace('{{lesson_name}}', req.body.topic).replace('{{course_structure}}', req.body.course_structure).replace('{{context}}', req.body.context ?? 'This information can be omitted.')
+    }
+
     const response = await client.chat.completions.create({
         model: 'sonar-pro',
-        messages: [{ role: 'user', content: prompt + req.body.topic }]
+        messages: [{ role: 'user', content: prompt }]
     });
 
     let result = response.choices[0].message.content
@@ -32,8 +44,8 @@ const handleGenerate = async (req, res, prompt) => {
         //result = JSON.parse(result.trim().replaceAll('`', '"').replace(/\s+/g, " ").trim().replace(/[\t\n\r]/g, "").replace('json', '').trim())
 
         const formattext = new formatter(result);
-        result = formattext.parse();
 
+        result = formattext.parse();
     }
     if (req.path === '/api/generateFastCourse') {
         courses.push(result);

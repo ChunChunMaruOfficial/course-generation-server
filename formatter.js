@@ -3,46 +3,85 @@ class JsonFormatter {
     this.rawText = rawText;
   }
 
-  // Найти корректный JSON с балансом фигурных скобок
   extractJsonString() {
-    const start = this.rawText.indexOf('{');
-    if (start === -1) return null;
+    const firstBrace = this.rawText.indexOf('{');
+    const firstBracket = this.rawText.indexOf('[');
+    if (firstBrace === -1 && firstBracket === -1) return null;
+    const start = (firstBrace === -1) ? firstBracket :
+      (firstBracket === -1) ? firstBrace :
+        Math.min(firstBrace, firstBracket);
+    const openChar = this.rawText[start];
+    const closeChar = openChar === '{' ? '}' : ']';
 
-    let balance = 0;
-    let end = -1;
+    let balance = 0, inString = false, escapeNext = false;
     for (let i = start; i < this.rawText.length; i++) {
-      if (this.rawText[i] === '{') balance++;
-      else if (this.rawText[i] === '}') balance--;
-      if (balance === 0) {
-        end = i;
-        break;
+      const ch = this.rawText[i];
+      if (escapeNext) {
+        escapeNext = false;
+        continue;
+      }
+      if (ch === '\\') {
+        escapeNext = true;
+        continue;
+      }
+      if (ch === '"') {
+        inString = !inString;
+        continue;
+      }
+      if (!inString) {
+        if (ch === openChar) balance++;
+        else if (ch === closeChar) balance--;
+        if (balance === 0) {
+          return this.rawText.slice(start, i + 1);
+        }
       }
     }
-    if (end === -1) return null;
-
-    // Возвращаем подстроку с JSON, отрезая весь хвост
-    return this.rawText.slice(start, end + 1);
+    return null;
   }
 
-  // Заменяем обратные кавычки на двойные кавычки в строке, чтобы избежать ошибки парсинга
   sanitizeBackticks(str) {
     return str.replace(/`/g, '"');
+  }
+
+replaceInnerDoubleQuotesLessonText(jsonStr) {
+  return jsonStr.replace(/("lesson_text"\s*:\s*)"((?:[^"\\]|\\.)*)"/, (match, p1, content) => {
+    let result = '';
+    let escaped = false;
+    for (let i = 0; i < content.length; i++) {
+      const ch = content[i];
+      if (ch === '"' && !escaped) {
+        result += "'";
+      } else {
+        result += ch;
+      }
+      escaped = (ch === '\\' && !escaped);
+    }
+    return p1 + '"' + result + '"';
+  });
+}
+
+
+  removeAllNewlines(str) {
+    // Удаляем все реальные переносы строк, табуляции и возвраты каретки
+    return str.replace(/[\r\n\t]+/g, '');
   }
 
   parse() {
     let jsonString = this.extractJsonString();
     if (!jsonString) throw new Error("JSON не найден");
-
-    // Замена обратных кавычек на двойные кавычки
     jsonString = this.sanitizeBackticks(jsonString);
+    jsonString = this.removeAllNewlines(jsonString);
+    jsonString = this.replaceInnerDoubleQuotesLessonText(jsonString);
 
+    
     try {
+      console.log(jsonString);
+
       return JSON.parse(jsonString);
-    } catch (e) {
-      throw new Error("Ошибка парсинга JSON: " + e.message);
+    } catch (err) {
+      throw new Error("Ошибка парсинга JSON: " + err.message);
     }
   }
 }
-
 
 module.exports = JsonFormatter;
