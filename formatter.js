@@ -43,27 +43,30 @@ class JsonFormatter {
     return str.replace(/`/g, '"');
   }
 
-replaceInnerDoubleQuotesLessonText(jsonStr) {
-  return jsonStr.replace(/("lesson_text"\s*:\s*)"((?:[^"\\]|\\.)*)"/, (match, p1, content) => {
-    let result = '';
-    let escaped = false;
-    for (let i = 0; i < content.length; i++) {
-      const ch = content[i];
-      if (ch === '"' && !escaped) {
-        result += "'";
-      } else {
-        result += ch;
+  replaceInnerDoubleQuotesLessonText(jsonStr) {
+    return jsonStr.replace(/("lesson_text"\s*:\s*)"((?:[^"\\]|\\.)*)"/, (match, p1, content) => {
+      let result = '';
+      let escaped = false;
+      for (let i = 0; i < content.length; i++) {
+        const ch = content[i];
+        if (ch === '"' && !escaped) {
+          result += "'";
+        } else {
+          result += ch;
+        }
+        escaped = (ch === '\\' && !escaped);
       }
-      escaped = (ch === '\\' && !escaped);
-    }
-    return p1 + '"' + result + '"';
-  });
-}
+      return p1 + '"' + result + '"';
+    });
+  }
 
 
   removeAllNewlines(str) {
-    // Удаляем все реальные переносы строк, табуляции и возвраты каретки
     return str.replace(/[\r\n\t]+/g, '');
+  }
+
+  removeClassNames(str) {
+    return str.replace(/className="[^"]*"/g, '');
   }
 
   parse() {
@@ -71,9 +74,10 @@ replaceInnerDoubleQuotesLessonText(jsonStr) {
     if (!jsonString) throw new Error("JSON не найден");
     jsonString = this.sanitizeBackticks(jsonString);
     jsonString = this.removeAllNewlines(jsonString);
+    jsonString = this.removeClassNames(jsonString);
     jsonString = this.replaceInnerDoubleQuotesLessonText(jsonString);
 
-    
+
     try {
       console.log(jsonString);
 

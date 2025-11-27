@@ -5,6 +5,7 @@ const generateFastCourse = require('./postmethods/generateFastCourse')
 const generateLesson = require('./postmethods/generateLesson')
 const generatePractice = require('./postmethods/generatePractice')
 const generateQuestions = require('./postmethods/generateQuestions')
+const getLesson = require('./postmethods/getLesson')
 
 function POSTmethod(req, res) {
     switch (req.path) {
@@ -16,6 +17,9 @@ function POSTmethod(req, res) {
         //     break;
         case '/api/generateExplanation':
             generateExplanation(req, res);
+            break;
+        case '/api/getLesson':
+            getLesson(req, res);
             break;
         case '/api/generateQuestions':
             generateQuestions(req, res);

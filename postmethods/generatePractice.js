@@ -12,9 +12,9 @@ async function generatePractice (req, res) {
     result = formattext.parse();
 
     if (req.body.userid) {
-        users.find(v => v.id === req.body.userid).courses.find(v => v.id === req.body.courseid).module.find(v => v.id === req.body.moduleid).lessons.push(result)
+        users.find(v => v.id === req.body.userid).courses.find(v => v.id === req.body.courseid).modules.find(v => v.id === req.body.moduleid).lessons.push(result)
     } else {
-        courses.find(v => v.id === req.body.courseid).module.find(v => v.id === req.body.moduleid).lessons.push(result)
+        courses.find(v => v.id === req.body.courseid).modules.find(v => v.id === req.body.moduleid).lessons.push(result)
     }
     res.json({ result });
 }

@@ -6,7 +6,7 @@ const courses = JSON.parse(fs.readFileSync('data/courses.json', 'utf-8'));
 const users = JSON.parse(fs.readFileSync('data/users.json', 'utf-8'));
 
 async function generateFastCourse(req, res) {
-    let result = await handleGenerate(prompts.course.replace('{{topic}}') + req.body.answers);
+    let result = await handleGenerate(prompts.course.replace('{{topic}}', req.body.topic) + req.body.answers + ". " + req.body.notes);
     if (result.includes('УПСС!')){
         res.json({ result });
         return 0
