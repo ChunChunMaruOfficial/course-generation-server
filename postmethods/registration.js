@@ -1,3 +1,5 @@
+
+const fs = require('fs');
 const saltRounds = 12;
 const users = JSON.parse(fs.readFileSync('data/users.json', 'utf-8'));
 const bcrypt = require('bcrypt');
@@ -8,7 +10,8 @@ async function registration(req, res) {
     }
     const hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
     const id = Date.now()
-    users.push({ email: req.body.email, password: hashedPassword, id: id, date: Date().toLocaleDateString('ru-RU'), courses: courses, days: [] })
+    const date = new Date()
+    users.push({ email: req.body.email, password: hashedPassword, id: id, date: date.toLocaleDateString('ru-RU'), courses: courses, days: [] })
     fs.writeFileSync('data/users.json', JSON.stringify(users, null, 2), 'utf-8');
     return res.status(200).json({ answer: 'Успешная регистрация', user: { id: id, email: req.body.email } });
 }

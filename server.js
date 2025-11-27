@@ -9,8 +9,6 @@ function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-let courses = []
-
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -24,7 +22,7 @@ app.use((req, res) => {
       GETmethod(req, res);
       break;
     case "POST":            
-      POSTmethod(req, res, courses);
+      POSTmethod(req, res);
       break;
     default:
       res.status(405).send('Method not allowed');
