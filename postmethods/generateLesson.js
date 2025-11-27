@@ -12,6 +12,8 @@ async function generateLesson(req, res) {
     let result = await handleGenerate(prompt);
     const formattext = new formatter(result);
     result = formattext.parse();
+    console.log(result);
+    
     if (req.body.userid) {
         users.find(v => v.id === req.body.userid).courses.find(v => v.id === req.body.courseid).modules.find(v => v.id === req.body.moduleid).lessons.find(v => v.id === req.body.lessonid).content = result.lesson_text
     } else {

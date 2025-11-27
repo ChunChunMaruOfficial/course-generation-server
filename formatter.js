@@ -43,22 +43,43 @@ class JsonFormatter {
     return str.replace(/`/g, '"');
   }
 
+  removeJSXReturn(jsonStr) {
+    return jsonStr
+      .replace(/^.*?return\s*\(\s*/s, '')  // убираем return (
+      .replace(/\s*\)\s*;?\s*$/s, '')      // убираем ) в конце
+      .replace(/^<div[^>]*>\s*/s, '')      // убираем <div style=...
+      .replace(/\s*<\/div>\s*$/s, '');     // убираем </div>
+  }
+
+  // 🔥 НОВОЕ 2: Убирает React class/style инициализацию
+  removeReactProps(str) {
+    return str
+      .replace(/style\s*=\s*\{[^}]+\}/g, '')           // style={{...}}
+      .replace(/className\s*=\s*"[^"]*"/g, '')         // className="..."
+      .replace(/class\s*=\s*"[^"]*"/g, '');            // class="..."
+  }
+
   replaceInnerDoubleQuotesLessonText(jsonStr) {
-    return jsonStr.replace(/("lesson_text"\s*:\s*)"((?:[^"\\]|\\.)*)"/, (match, p1, content) => {
+    return jsonStr.replace(/("lesson_text"\s*:\s*)("[^"]*")/g, (match, prefix, content) => {
+      // 🔥 Экранируем ВСЕ " внутри содержимого
       let result = '';
       let escaped = false;
       for (let i = 0; i < content.length; i++) {
         const ch = content[i];
-        if (ch === '"' && !escaped) {
-          result += "'";
+        if (ch === '\\' && !escaped) {
+          escaped = true;
+          result += ch;
+        } else if (ch === '"' && !escaped) {
+          result += '\\"';  // ← Экранируем ВСЕ "
         } else {
           result += ch;
+          escaped = false;
         }
-        escaped = (ch === '\\' && !escaped);
       }
-      return p1 + '"' + result + '"';
+      return prefix + '"' + result + '"';
     });
   }
+
 
 
   removeAllNewlines(str) {
@@ -69,12 +90,35 @@ class JsonFormatter {
     return str.replace(/className="[^"]*"/g, '');
   }
 
+  escapeJsonStringByChar(str) {
+    let result = '';
+
+    for (let i = 0; i < str.length; i++) {
+      const char = str[i];
+
+      switch (char) {
+        case '\\': result += '\\\\'; break;  // Обратный слеш → \\\\
+        case '"': result += '\\"'; break;  // Кавычка → \"
+        case '\n': result += '\\n'; break;  // Новая строка
+        case '\r': result += '\\r'; break;  // Возврат каретки
+        case '\t': result += '\\t'; break;  // Таб
+        case '\b': result += '\\b'; break;  // Backspace
+        case '\f': result += '\\f'; break;  // Form feed
+        default: result += char;           // Остальное как есть
+      }
+    }
+
+    return result;
+  }
   parse() {
     let jsonString = this.extractJsonString();
     if (!jsonString) throw new Error("JSON не найден");
     jsonString = this.sanitizeBackticks(jsonString);
     jsonString = this.removeAllNewlines(jsonString);
     jsonString = this.removeClassNames(jsonString);
+    jsonString = this.removeJSXReturn(jsonString);
+    jsonString = this.removeReactProps(jsonString);
+    jsonString = this.escapeJsonStringByChar(jsonString);
     jsonString = this.replaceInnerDoubleQuotesLessonText(jsonString);
 
 
@@ -83,7 +127,16 @@ class JsonFormatter {
 
       return JSON.parse(jsonString);
     } catch (err) {
-      throw new Error("Ошибка парсинга JSON: " + err.message);
+
+
+
+      const desperateFix = jsonString
+        .replace(/'''[\s\S]*?'''/g, '"code"')
+        .replace(/"""/g, '"')
+        .replace(/(?<!\\)"/g, '\\"');
+
+      console.log("💥 Desperate fix:", desperateFix);
+      return JSON.parse(desperateFix);
     }
   }
 }

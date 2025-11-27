@@ -5,14 +5,24 @@ const handleGenerate = require('./handleGenerate')
 const courses = JSON.parse(fs.readFileSync('data/courses.json', 'utf-8'));
 const users = JSON.parse(fs.readFileSync('data/users.json', 'utf-8'));
 
+function clearLessons(course) {
+  course.modules.forEach(m => m.lessons.forEach(l => {
+    l.content = ''; l.practice = [];
+  }));
+  return course;
+}
+
+
+
 async function generateFastCourse(req, res) {
     let result = await handleGenerate(prompts.course.replace('{{topic}}', req.body.topic) + req.body.answers + ". " + req.body.notes);
-    if (result.includes('УПСС!')){
+    if (result.includes('УПСС!')) {
         res.json({ result });
         return 0
     }
     const formattext = new formatter(result);
     result = formattext.parse();
+    result = clearLessons(result)
     result.id = Date.now()
     if (req.body.userid) {
         users.find(v => v.id === req.body.userid).courses.push(result)

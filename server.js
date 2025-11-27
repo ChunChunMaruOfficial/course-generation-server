@@ -5,15 +5,10 @@ const cors = require('cors');
 const GETmethod = require('./GetMethod.js')
 const POSTmethod = require('./PostMethod.js')
 
-function getRandom(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Ваш исходный middleware подход (должен работать)
 app.use((req, res) => {
   console.log('Request body:', req.body);
   
