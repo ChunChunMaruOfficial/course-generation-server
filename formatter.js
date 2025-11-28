@@ -90,26 +90,6 @@ class JsonFormatter {
     return str.replace(/className="[^"]*"/g, '');
   }
 
-  escapeJsonStringByChar(str) {
-    let result = '';
-
-    for (let i = 0; i < str.length; i++) {
-      const char = str[i];
-
-      switch (char) {
-        case '\\': result += '\\\\'; break;  // Обратный слеш → \\\\
-        case '"': result += '\\"'; break;  // Кавычка → \"
-        case '\n': result += '\\n'; break;  // Новая строка
-        case '\r': result += '\\r'; break;  // Возврат каретки
-        case '\t': result += '\\t'; break;  // Таб
-        case '\b': result += '\\b'; break;  // Backspace
-        case '\f': result += '\\f'; break;  // Form feed
-        default: result += char;           // Остальное как есть
-      }
-    }
-
-    return result;
-  }
   parse() {
     let jsonString = this.extractJsonString();
     if (!jsonString) throw new Error("JSON не найден");
@@ -118,7 +98,6 @@ class JsonFormatter {
     jsonString = this.removeClassNames(jsonString);
     jsonString = this.removeJSXReturn(jsonString);
     jsonString = this.removeReactProps(jsonString);
-    jsonString = this.escapeJsonStringByChar(jsonString);
     jsonString = this.replaceInnerDoubleQuotesLessonText(jsonString);
 
 
