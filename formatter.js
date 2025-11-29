@@ -59,26 +59,47 @@ class JsonFormatter {
       .replace(/class\s*=\s*"[^"]*"/g, '');            // class="..."
   }
 
-  replaceInnerDoubleQuotesLessonText(jsonStr) {
-    return jsonStr.replace(/("lesson_text"\s*:\s*)("[^"]*")/g, (match, prefix, content) => {
-      // 🔥 Экранируем ВСЕ " внутри содержимого
-      let result = '';
-      let escaped = false;
-      for (let i = 0; i < content.length; i++) {
-        const ch = content[i];
-        if (ch === '\\' && !escaped) {
-          escaped = true;
-          result += ch;
-        } else if (ch === '"' && !escaped) {
-          result += '\\"';  // ← Экранируем ВСЕ "
-        } else {
-          result += ch;
-          escaped = false;
-        }
+replaceInnerDoubleQuotesLessonText(jsonStr) {
+  return jsonStr.replace(/("lesson_text"\s*:\s*)"((?:[^"\\]|\\.)*)"/g, (match, prefix, content) => {
+    // 🔥 Экранируем " ТОЛЬКО вне HTML-атрибутов
+    let result = '';
+    let escaped = false;
+    let inHtmlAttr = false;
+    
+    for (let i = 0; i < content.length; i++) {
+      const ch = content[i];
+      
+      // Проверяем вход в HTML-атрибут (после =")
+      if (ch === '=' && i + 1 < content.length && content[i + 1] === '"') {
+        inHtmlAttr = true;
+        result += ch;
+        i++; // Пропускаем "
+        result += ch;
+        continue;
       }
-      return prefix + '"' + result + '"';
-    });
-  }
+      
+      // Выход из HTML-атрибута (")
+      if (inHtmlAttr && ch === '"' && !escaped) {
+        inHtmlAttr = false;
+        result += ch;
+        continue;
+      }
+      
+      if (ch === '\\' && !escaped) {
+        escaped = true;
+        result += ch;
+      } else if (ch === '"' && !escaped && !inHtmlAttr) {
+        // 🔥 Экранируем ТОЛЬКО вне атрибутов
+        result += '\\"';
+      } else {
+        result += ch;
+        escaped = false;
+      }
+    }
+    return prefix + '"' + result + '"';
+  });
+}
+
 
 
 
@@ -118,15 +139,6 @@ jsonString = this.replaceTripleBackticksWithCodeTags(jsonString);
       return JSON.parse(jsonString);
     } catch (err) {
 
-
-
-      const desperateFix = jsonString
-        .replace(/'''[\s\S]*?'''/g, '"code"')
-        .replace(/"""/g, '"')
-        .replace(/(?<!\\)"/g, '\\"');
-
-      console.log("Desperate fix:", desperateFix);
-      return JSON.parse(desperateFix);
     }
   }
 }
