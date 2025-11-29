@@ -1,382 +1,90 @@
 [
   {
-    "title": "Интенсивный JavaScript: Практическое Мастерство за 1-2 Недели",
-    "lessonsCount": 35,
+    "title": "JavaScript: Быстрый Старт к Практическому Мастерству",
+    "lessonsCount": 28,
     "progress": 0,
     "modules": [
       {
         "id": 1,
-        "title": "Фундамент: Типы Данных и Переменные",
+        "title": "Основы JavaScript: Ментальная Модель",
         "completed": false,
         "lessons": [
           {
             "id": 1,
-            "title": "Большая Картина: Как JavaScript Хранит Информацию",
-            "content": "\"<h2>Sora 2: Большая Картина</h2><p>Представьте, что вы открыли <i>TikTok, где каждое видео создаёт не человек, а нейросеть</i>. Это Sora 2 — модель искусственного интеллекта от OpenAI[2], которая генерирует видео из текстового описания. Но главное отличие: это не просто инструмент, а <b>социальная сеть</b>, где ИИ и люди создают контент вместе[2].</p><h3>Суть в Одной Фразе</h3><p>Sora 2 — это <b>диффузионная модель</b>[5], которая превращает текст в видео, точно так же, как ChatGPT превращает текст в текст. Но вместо слов она генерирует кадры.</p><h3>Как Это Работает: Три Слоя</h3><p><b>Уровень 1: Текст → Видео</b></p><p>Вы пишете: <i>«кот прыгает через забор в солнечный день»</i>[3]. Sora 2 понимает не просто слова — она понимает <b>физику</b>: как движется кот, как падает свет, как работает гравитация[6]. Это главное улучшение: если баскетбольный мяч не попадает в кольцо, он реалистично отскакивает, а не телепортируется[6].</p><p><b>Уровень 2: Синхронизация Звука</b></p><p>Видео создаётся <i>вместе со звуком</i>, а не отдельно[3]. Это означает, что диалоги, звуковые эффекты и фоновая музыка генерируются одновременно с визуальной частью — они идеально синхронизированы[6].</p><p><b>Уровень 3: Функция Cameo</b></p><p>Вот где начинается социальный элемент. Вы можете <b>отсканировать своё лицо</b>[2] или загрузить фото. Система создаёт ИИ-аватар вашего лица, и другие люди могут использовать его в своих видео — с вашего разрешения[3][4]. Оба человека становятся соавторами и могут удалить видео в любой момент[2].</p><h3>Технический Прорыв: Пространственно-Временные Патчи</h3><p>В отличие от первой версии Sora, которая использовала архитектуру трансформера с токенами, Sora 2 работает с <b>пространственно-временными патчами</b>[5] — фрагментами, которые содержат информацию не только о частях кадров, но и о том, как они меняются <i>во времени</i>. Это как видеть не просто снимок, а видеть снимок + его движение.</p><h3>Что Может Делать Sora 2</h3><table><tr><th>Возможность</th><th>Пример</th></tr><tr><td>Генерация видео до 10 секунд[2]</td><td>Короткие ролики для соцсетей</td></tr><tr><td>Реалистичная физика[6]</td><td>Правильное отскакивание мяча, реалистичное движение воды</td></tr><tr><td>Сложные сцены[6]</td><td>Олимпийские гимнастические номера, водные виды спорта</td></tr><tr><td>Управляемость стиля[3]</td><td>Кинематографический вид, анимация, фотореализм, сюрреализм</td></tr><tr><td>Синхронизация звука[3]</td><td>Диалоги, звуковые эффекты, фоновая музыка — всё вместе</td></tr><tr><td>Cameo — ИИ-аватары[2][3]</td><td>Вставить себя или друзей в сгенерированное видео</td></tr></table><h3>Где и Как Получить Доступ</h3><p>Приложение Sora доступно в США и Канаде на iPhone[2]. Распространяется по инвайтам: каждый пользователь получает четыре приглашения[2]. Android-версия ещё в разработке[2].</p><p>Если вы разработчик, Sora 2 уже поддерживается через API и совместима с OpenAI Chat Completions[3].</p><h3>Почему Это Важно</h3><p><i>Быстрое создание контента</i> — раньше вы тратили часы на видеомонтаж, теперь достаточно текста. <i>Демократизация творчества</i> — вам не нужны камера и навыки режиссёра. <i>Новая форма социального контента</i> — где дипфейки становятся <b>легитимной формой творчества</b>[2], а не инструментом обмана.</p><h3>Главный Вывод</h3><p>Sora 2 — это то же самое, что ChatGPT сделал для текста: <b>убрала барьер входа</b>. Раньше создать видео мог только профессионал. Теперь это может сделать каждый, просто введя текстовый запрос. Это не просто улучшение старой технологии — это <i>новая категория инструмента</i>, который меняет то, как мы создаём контент.</p>\"",
+            "title": "Что такое JavaScript: Большая Картина",
+            "content": "\"<div><h2>Что такое JavaScript: Большая Картина</h2><p><b>JavaScript</b> — это язык программирования, который <i>оживляет веб-страницы</i>. Представьте HTML как скелет страницы, CSS как кожу и одежду, а JavaScript как <i>мышцы и мозг</i>, которые заставляют всё двигаться и реагировать.</p><p>На самом базовом уровне, JavaScript позволяет вам:</p><ul><li>Реагировать на действия пользователя (клики, ввод текста)</li><li>Изменять содержимое страницы в реальном времени</li><li>Отправлять и получать данные с серверов</li><li>Хранить информацию в браузере пользователя</li></ul><p><img src='https://via.placeholder.com/600x300?text=JavaScript+Powers' alt='JavaScript powers diagram' /></p><h3>Три главных способа использования JavaScript</h3><p><b>1. Взаимодействие с пользователем</b> — когда вы кликаете на кнопку и происходит что-то мгновенное (без перезагрузки страницы), это JavaScript. <i>Это создаёт ощущение живого приложения</i>.</p><p><b>2. Манипуляция данными</b> — JavaScript берёт информацию (часто в формате <b>JSON</b>[1]), преобразует её и показывает нужным образом. Как если бы вы сортировали стопку карточек по правилам.</p><p><b>3. Асинхронные операции</b> — пока пользователь занят чем-то на странице, JavaScript может незаметно загружать данные с сервера. <i>Это похоже на то, как официант принимает заказ и тут же идёт на кухню, не ожидая, пока вы закончите есть</i>.</p><p><img src='https://via.placeholder.com/600x300?text=Three+JS+Powers' alt='Three main JavaScript capabilities' /></p><h3>JavaScript в React</h3><p>В контексте React[2] JavaScript становится ещё мощнее. Вы используете его для:</p><ul><li><b>Обработки JSON-данных</b> — преобразование данных с сервера в интерфейс [1]</li><li><b>Управления состоянием</b> — отслеживание того, что происходит в приложении</li><li><b>Создания динамических форм</b> — которые реагируют на ввод пользователя[3]</li></ul><p><b>Ключевая идея:</b> JavaScript — это <i>язык логики</i>. HTML описывает <i>что</i> показывать, CSS описывает <i>как</i> показывать, а JavaScript описывает <i>когда и как реагировать</i>.</p><h3>Начало пути</h3><p>На этом курсе вы научитесь:</p><ul><li>Работать с <b>переменными</b> и <b>типами данных</b> — контейнеры для информации</li><li>Использовать <b>функции</b> — переиспользуемые блоки кода</li><li>Манипулировать <b>DOM</b>[4] — структурой страницы</li><li>Обрабатывать <b>асинхронность</b> — делать несколько дел одновременно</li></ul><p>Всё остальное строится на этих четырёх столпах. Как в строительстве: сначала фундамент, потом стены, потом крыша.</p><p><img src='https://via.placeholder.com/600x300?text=Learning+Path' alt='JavaScript learning foundation' /></p></div>\"",
             "links": [
               {
                 "id": 1,
                 "type": "material",
-                "url": "https://www.block-chain24.com/cryptocurrency/sora",
-                "description": "Криптовалюта SORA (XOR токен) — децентрализованная экономика"
+                "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON",
+                "description": "Работа с JSON на MDN — полное руководство по парсингу и обработке данных"
               },
               {
                 "id": 2,
                 "type": "material",
-                "url": "https://companies.rbc.ru/news/FApz4YtL4N/sora-2-novaya-sotsset-gde-deepfake-stal-normoj/",
-                "description": "Sora 2 от OpenAI — социальная сеть с функцией Cameo и синхронизацией звука"
+                "url": "https://tamalweb.com/json-reactjs",
+                "description": "Освоение JSON в ReactJS — практические примеры с hooks и state"
               },
               {
                 "id": 3,
                 "type": "material",
-                "url": "https://www.cometapi.com/ru/sora-2-what-is-it-what-can-it-do/",
-                "description": "Подробное описание возможностей Sora 2 — физика, звук, управляемость стиля, API доступ"
+                "url": "https://codeburst.io/reactjs-a-quick-tutorial-to-build-dynamic-json-based-form-a4768b3151c0",
+                "description": "Построение динамических форм на базе JSON в React"
               },
               {
                 "id": 4,
                 "type": "material",
-                "url": "https://www.pravilamag.ru/articles/760137-ne-veryu-svoim-glazam-kak-neiroset-sora-2-zahvatila-socseti-i-pochemu-ee-glavnym-produktom-stal-breinrot/",
-                "description": "Как Sora 2 работает с ИИ-аватарами и использованием лиц в видео"
-              },
-              {
-                "id": 5,
-                "type": "material",
-                "url": "https://ru.wikipedia.org/wiki/Sora",
-                "description": "Архитектура Sora — диффузионная модель, трансформер, пространственно-временные патчи"
-              },
-              {
-                "id": 6,
-                "type": "material",
-                "url": "https://vc.ru/ai/2249655-chto-takoe-sora-2-i-kak-polzovatsya",
-                "description": "Улучшения в физике, реалистичности и синхронизации звука в Sora 2"
+                "url": "https://www.dhiwise.com/post/step-by-step-guide-implementing-react-json-formatter",
+                "description": "Работа с DOM и форматирование JSON в React компонентах"
               }
             ],
-            "practice": [
-              {
-                "id": 1,
-                "question": "Какая из следующих переменных содержит <span>примитивный тип</span> данных?",
-                "options": [
-                  {
-                    "text": "let person = { name: 'Алиса', age: 30 };",
-                    "correct": false
-                  },
-                  {
-                    "text": "let hobbies = ['чтение', 'кодирование', 'путешествия'];",
-                    "correct": false
-                  },
-                  {
-                    "text": "let age = 30;",
-                    "correct": true
-                  },
-                  {
-                    "text": "let data = { id: 1, items: [1, 2, 3] };",
-                    "correct": false
-                  }
-                ]
-              },
-              {
-                "id": 2,
-                "question": "Чем отличается число <code>5</code> от строки <code>'5'</code> в JavaScript?",
-                "options": [
-                  {
-                    "text": "Они абсолютно одинаковые, просто по-разному записаны",
-                    "correct": false
-                  },
-                  {
-                    "text": "Число можно использовать в математических операциях, строку можно только объединять с другим текстом",
-                    "correct": true
-                  },
-                  {
-                    "text": "Строка работает быстрее",
-                    "correct": false
-                  },
-                  {
-                    "text": "Число занимает больше памяти",
-                    "correct": false
-                  }
-                ]
-              },
-              {
-                "id": 3,
-                "question": "Что представляет собой <span>объект</span> в JavaScript согласно уроку?",
-                "options": [
-                  {
-                    "text": "Простое неделимое значение, как атом",
-                    "correct": false
-                  },
-                  {
-                    "text": "Контейнер для многих значений сразу, как чемодан с отделениями",
-                    "correct": true
-                  },
-                  {
-                    "text": "Упорядоченный список элементов",
-                    "correct": false
-                  },
-                  {
-                    "text": "Текстовый формат для обмена данными",
-                    "correct": false
-                  }
-                ]
-              },
-              {
-                "id": 4,
-                "question": "Для чего используются методы <code>JSON.parse()</code> и <code>JSON.stringify()</code> при работе с данными?",
-                "options": [
-                  {
-                    "text": "JSON.parse() — для создания объектов, JSON.stringify() — для удаления объектов",
-                    "correct": false
-                  },
-                  {
-                    "text": "JSON.parse() — для чтения данных (преобразование текста в объект), JSON.stringify() — для отправки (преобразование объекта в текст)",
-                    "correct": true
-                  },
-                  {
-                    "text": "Оба метода делают одно и то же",
-                    "correct": false
-                  },
-                  {
-                    "text": "Они используются только для работы с числами",
-                    "correct": false
-                  }
-                ]
-              },
-              {
-                "id": 5,
-                "question": "Выберите верное утверждение о разнице между <span>примитивными</span> и <span>сложными типами</span> данных:",
-                "options": [
-                  {
-                    "text": "Примитивные типы — это числа, сложные типы — это только объекты",
-                    "correct": false
-                  },
-                  {
-                    "text": "Примитивные типы — простые неделимые значения (числа, строки, булевы), сложные типы — контейнеры для многих значений (объекты, массивы)",
-                    "correct": true
-                  },
-                  {
-                    "text": "Сложные типы работают медленнее примитивных",
-                    "correct": false
-                  },
-                  {
-                    "text": "Примитивные типы используются только в React",
-                    "correct": false
-                  }
-                ]
-              }
-            ],
+            "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
           },
           {
             "id": 2,
-            "title": "Примитивные Типы: Числа, Строки, Булевы",
+            "title": "Переменные и Типы Данных: Контейнеры для Информации",
             "content": "",
             "links": [],
-            "practice": [
-              {
-                "id": 1,
-                "question": "Какое из следующих утверждений правильно описывает разницу между примитивными и сложными типами данных?",
-                "options": [
-                  {
-                    "text": "Примитивные типы — это простые, неделимые куски информации, а сложные типы — контейнеры для многих значений",
-                    "correct": true
-                  },
-                  {
-                    "text": "Примитивные типы хранят больше информации, чем сложные типы",
-                    "correct": false
-                  },
-                  {
-                    "text": "Сложные типы работают быстрее примитивных типов",
-                    "correct": false
-                  },
-                  {
-                    "text": "Примитивные типы используются только в React, сложные типы — только на бэкенде",
-                    "correct": false
-                  }
-                ]
-              },
-              {
-                "id": 2,
-                "question": "Что произойдёт, если вы попытаетесь сложить число 5 и строку \"5\" в JavaScript?",
-                "options": [
-                  {
-                    "text": "Результат будет 10, так как JavaScript преобразует строку в число",
-                    "correct": false
-                  },
-                  {
-                    "text": "Результат будет \"55\", так как строка объединится с числом",
-                    "correct": true
-                  },
-                  {
-                    "text": "Произойдёт ошибка и код не выполнится",
-                    "correct": false
-                  },
-                  {
-                    "text": "JavaScript выведет undefined",
-                    "correct": false
-                  }
-                ]
-              },
-              {
-                "id": 3,
-                "question": "Какой оператор позволяет узнать тип переменной в JavaScript?[1]",
-                "options": [
-                  {
-                    "text": "typeof",
-                    "correct": true
-                  },
-                  {
-                    "text": "typeOf",
-                    "correct": false
-                  },
-                  {
-                    "text": "getType()",
-                    "correct": false
-                  },
-                  {
-                    "text": "isType()",
-                    "correct": false
-                  }
-                ]
-              },
-              {
-                "id": 4,
-                "question": "В метафоре с почтовой системой из урока, что обозначает переменная?",
-                "options": [
-                  {
-                    "text": "Письмо внутри ящика",
-                    "correct": false
-                  },
-                  {
-                    "text": "Почтовый ящик с именем",
-                    "correct": true
-                  },
-                  {
-                    "text": "Формат письма (текст, посылка, конверт)",
-                    "correct": false
-                  },
-                  {
-                    "text": "Адрес доставки",
-                    "correct": false
-                  }
-                ]
-              },
-              {
-                "id": 5,
-                "question": "Какой из следующих примеров демонстрирует правильное использование сложного типа данных для хранения информации о человеке?",
-                "options": [
-                  {
-                    "text": "let person = \"Алиса, 30, студент\";",
-                    "correct": false
-                  },
-                  {
-                    "text": "let person = { name: \"Алиса\", age: 30, isStudent: false };",
-                    "correct": true
-                  },
-                  {
-                    "text": "let person = 30;",
-                    "correct": false
-                  },
-                  {
-                    "text": "let person = true;",
-                    "correct": false
-                  }
-                ]
-              },
-              {
-                "id": 6,
-                "question": "Когда вы используете JSON.parse() и JSON.stringify(), с какой операцией над данными вы работаете?[1]",
-                "options": [
-                  {
-                    "text": "С преобразованием данных из одного формата в другой",
-                    "correct": true
-                  },
-                  {
-                    "text": "С созданием новых переменных",
-                    "correct": false
-                  },
-                  {
-                    "text": "С удалением данных",
-                    "correct": false
-                  },
-                  {
-                    "text": "С копированием файлов на диск",
-                    "correct": false
-                  }
-                ]
-              },
-              {
-                "id": 7,
-                "question": "Какой из этих примеров показывает примитивный тип данных?",
-                "options": [
-                  {
-                    "text": "let hobbies = [\"чтение\", \"кодирование\"];",
-                    "correct": false
-                  },
-                  {
-                    "text": "let person = { name: \"Алиса\" };",
-                    "correct": false
-                  },
-                  {
-                    "text": "let age = 30;",
-                    "correct": true
-                  },
-                  {
-                    "text": "let data = { age: 30, name: \"Алиса\" };",
-                    "correct": false
-                  }
-                ]
-              }
-            ],
+            "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
           },
           {
             "id": 3,
-            "title": "Объекты и Массивы: Контейнеры для Данных",
+            "title": "Операторы и Логика: Принятие Решений",
             "content": "",
             "links": [],
             "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
           },
           {
             "id": 4,
-            "title": "Переменные var, let, const: Выбор Правильного Инструмента",
-            "content": "<h2>Три Инструмента для Хранения Данных: var, let, const</h2><p>В JavaScript есть три способа объявить переменную, но они работают совсем по-разному. Представьте, что вы открываете три типа сейфов в банке:</p><p><b>var</b> — старый сейф с <i>функциональной</i> дальностью видимости (видно из любого места функции, даже где его не объявили)</p><p><b>let</b> — современный сейф с <i>блочной</i> дальностью (видно только внутри блока { }, где его объявили)</p><p><b>const</b> — заблокированный сейф (после закрытия его больше не откроешь)</p><h3>Ключевое Различие: Область Видимости (Scope)</h3><p>Это 80% того, что вам нужно знать. Scope — это граница, внутри которой переменная существует:</p><table><tr><th>Инструмент</th><th>Область видимости</th><th>Переназначение</th><th>Переобъявление</th></tr><tr><td><b>var</b></td><td>Функция или глобально</td><td>✅ Да</td><td>✅ Да</td></tr><tr><td><b>let</b></td><td>Блок { }</td><td>✅ Да</td><td>❌ Нет</td></tr><tr><td><b>const</b></td><td>Блок { }</td><td>❌ Нет</td><td>❌ Нет</td></tr></table><h3>Реальный Пример: Почему это Важно</h3><p>Вот код с <b>var</b>[1]:</p><pre><code class=\"language-javascript\">if (true) {  var x = 10;  let y = 20;}console.log(x); // Выведет 10 (видна везде в функции)console.log(y); // Ошибка! ReferenceError (видна только в блоке)</code></pre><p><b>var</b> «протекает» за границы блока { }, потому что работает с <i>функциональной</i> областью видимости. Это частая причина багов. <b>let</b> уважает границы блока — это безопаснее.</p><h3>Переназначение vs Переобъявление</h3><p><i>Переназначение</i> — изменить значение: <code>x = 20</code></p><p><i>Переобъявление</i> — объявить переменную заново: <code>let x = 30</code> (когда x уже был объявлен)</p><p>Пример[1]:</p><pre><code class=\"language-javascript\">var a = 10;var a = 20; // ✅ Разрешено (var позволяет переобъявление)let b = 10;let b = 20; // ❌ Ошибка: Identifier 'b' has already been declaredconst c = 10;const c = 20; // ❌ Ошибка: Identifier 'c' has already been declared</code></pre><h3>const Не Означает «Неизменяемый»</h3><p>Главная ловушка: <b>const</b> предотвращает только переназначение <i>самой переменной</i>, но не её содержимого[2]:</p><pre><code class=\"language-javascript\">const myArray = [1, 2, 3];myArray.push(4); // ✅ Разрешено — меняем содержимоеconsole.log(myArray); // [1, 2, 3, 4]myArray = [5, 6]; // ❌ Ошибка — пытаемся переназначить саму переменнуюconst myObject = { name: \"John\" };myObject.name = \"Doe\"; // ✅ Разрешено — меняем свойствоmyObject = {}; // ❌ Ошибка — переназначение</code></pre><p>Думайте так: <b>const</b> блокирует <i>ссылку</i> на объект, но не содержимое объекта.</p><h3>Практическое Правило: Что Использовать</h3><p><b>Используйте const по умолчанию</b>[3] — для переменных, которые не будут меняться. Это сигнал вам самому и коллегам: «Это значение зафиксировано».</p><p><b>Используйте let</b>[3], когда вам нужно переназначить значение: циклы, счётчики, изменяющиеся данные.</p><p><b>Избегайте var</b> — это старый стандарт. Используйте let/const, чтобы избежать неожиданных багов со scope.</p><pre><code class=\"language-javascript\">// ✅ Правильно: const для фиксированных значенийconst API_URL = \"https://api.example.com\";const price = 100;const discount = 0.1;const finalTotal = price * (1 - discount); // 90// ✅ Правильно: let для изменяющихся значенийlet total = 0;for (let i = 0; i < 10; i++) {  total += i; // total переназначается на каждой итерации}</code></pre><h3>Почему Это Имеет Значение</h3><p>Чистый код — это не о стиле. Когда вы выбираете <b>const</b>, вы говорите: «Это не должно меняться, если оно изменится — это ошибка». JavaScript поймёт это и будет вас ловить. <b>let</b> и <b>const</b> привели к меньшему количеству ошибок в современных проектах именно потому, что они <i>осторожнее с областью видимости</i>.</p>",
-            "links": [
-              {
-                "id": 1,
-                "type": "material",
-                "url": "https://www.w3schools.com/js/js_let.asp",
-                "description": "JavaScript Let, Const, и таблица сравнения var vs let vs const с примерами hoisting"
-              },
-              {
-                "id": 2,
-                "type": "material",
-                "url": "https://codeparrot.ai/blogs/javascript-var-vs-let-vs-const",
-                "description": "Подробное сравнение var, let, const с примерами мутабельности объектов и массивов"
-              },
-              {
-                "id": 3,
-                "type": "material",
-                "url": "https://www.geeksforgeeks.org/javascript/difference-between-var-let-and-const-keywords-in-javascript/",
-                "description": "GeeksforGeeks: различия в scope, hoisting, re-declaration с практическими рекомендациями"
-              }
-            ],
+            "title": "Функции: Переиспользуемые Блоки Кода",
+            "content": "",
+            "links": [],
             "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
           },
           {
             "id": 5,
-            "title": "Приложение: Создание Простой Структуры Данных",
+            "title": "Контрольная Точка: Напишите Простой Калькулятор",
             "content": "",
             "links": [],
             "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
@@ -385,55 +93,60 @@
       },
       {
         "id": 2,
-        "title": "Управление Потоком: Условия и Циклы",
+        "title": "Работа с Данными: Массивы и Объекты",
         "completed": false,
         "lessons": [
           {
             "id": 1,
-            "title": "Логика Выбора: if, else, switch",
+            "title": "Массивы: Списки и Итерация",
             "content": "",
             "links": [],
             "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
           },
           {
             "id": 2,
-            "title": "Повторение: for, while, do-while Циклы",
+            "title": "Методы Массивов: map, filter, reduce",
             "content": "",
             "links": [],
             "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
           },
           {
             "id": 3,
-            "title": "Работа с Массивами: forEach, map, filter",
+            "title": "Объекты: Организация Сложных Данных",
             "content": "",
             "links": [],
             "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
           },
           {
             "id": 4,
-            "title": "Булева Логика и Операторы Сравнения",
+            "title": "Деструктуризация и Спред-оператор",
             "content": "",
             "links": [],
             "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
           },
           {
             "id": 5,
-            "title": "Контрольная: Написание Логической Программы",
+            "title": "Контрольная Точка: Обработайте Набор Данных",
             "content": "",
             "links": [],
             "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
@@ -442,196 +155,27 @@
       },
       {
         "id": 3,
-        "title": "Функции: Переиспользуемый Код",
+        "title": "DOM и Взаимодействие с Веб-страницей",
         "completed": false,
         "lessons": [
           {
             "id": 1,
-            "title": "Что Такое Функция: Черный Ящик с Входами и Выходами",
+            "title": "DOM: Дерево Элементов Страницы",
             "content": "",
             "links": [],
             "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
           },
           {
             "id": 2,
-            "title": "Объявление Функций и Параметры",
+            "title": "Выбор Элементов: querySelector и getElementById",
             "content": "",
             "links": [],
             "practice": [],
-            "theorycompl": 0,
-            "practicecompl": 0,
-            "status": 0
-          },
-          {
-            "id": 3,
-            "title": "Стрелочные Функции и Современный Синтаксис",
-            "content": "",
-            "links": [],
-            "practice": [],
-            "theorycompl": 0,
-            "practicecompl": 0,
-            "status": 0
-          },
-          {
-            "id": 4,
-            "title": "Область Видимости: Что Видно Функции",
-            "content": "",
-            "links": [],
-            "practice": [],
-            "theorycompl": 0,
-            "practicecompl": 0,
-            "status": 0
-          },
-          {
-            "id": 5,
-            "title": "Практика: Библиотека Полезных Функций",
-            "content": "",
-            "links": [],
-            "practice": [],
-            "theorycompl": 0,
-            "practicecompl": 0,
-            "status": 0
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "title": "Объектно-Ориентированное Мышление",
-        "completed": false,
-        "lessons": [
-          {
-            "id": 1,
-            "title": "Объекты как Моделирование Реального Мира",
-            "content": "",
-            "links": [],
-            "practice": [],
-            "theorycompl": 0,
-            "practicecompl": 0,
-            "status": 0
-          },
-          {
-            "id": 2,
-            "title": "Свойства и Методы: Данные и Действия",
-            "content": "",
-            "links": [],
-            "practice": [],
-            "theorycompl": 0,
-            "practicecompl": 0,
-            "status": 0
-          },
-          {
-            "id": 3,
-            "title": "Constructor и this Контекст",
-            "content": "",
-            "links": [],
-            "practice": [],
-            "theorycompl": 0,
-            "practicecompl": 0,
-            "status": 0
-          },
-          {
-            "id": 4,
-            "title": "Классы в ES6: Синтаксический Сахар",
-            "content": "",
-            "links": [],
-            "practice": [],
-            "theorycompl": 0,
-            "practicecompl": 0,
-            "status": 0
-          },
-          {
-            "id": 5,
-            "title": "Проект: Система Управления Задачами",
-            "content": "",
-            "links": [],
-            "practice": [],
-            "theorycompl": 0,
-            "practicecompl": 0,
-            "status": 0
-          }
-        ]
-      },
-      {
-        "id": 5,
-        "title": "Асинхронность: Когда Код Ждет",
-        "completed": false,
-        "lessons": [
-          {
-            "id": 1,
-            "title": "Понимание Асинхронности: Времена Ожидания",
-            "content": "",
-            "links": [],
-            "practice": [],
-            "theorycompl": 0,
-            "practicecompl": 0,
-            "status": 0
-          },
-          {
-            "id": 2,
-            "title": "Callbacks: Функции как Реакция на События",
-            "content": "",
-            "links": [],
-            "practice": [],
-            "theorycompl": 0,
-            "practicecompl": 0,
-            "status": 0
-          },
-          {
-            "id": 3,
-            "title": "Promises: Обещание Результата в Будущем",
-            "content": "",
-            "links": [],
-            "practice": [],
-            "theorycompl": 0,
-            "practicecompl": 0,
-            "status": 0
-          },
-          {
-            "id": 4,
-            "title": "Async/Await: Синхронный Вид Асинхронного Кода",
-            "content": "",
-            "links": [],
-            "practice": [],
-            "theorycompl": 0,
-            "practicecompl": 0,
-            "status": 0
-          },
-          {
-            "id": 5,
-            "title": "Приложение: Работа с API",
-            "content": "",
-            "links": [],
-            "practice": [],
-            "theorycompl": 0,
-            "practicecompl": 0,
-            "status": 0
-          }
-        ]
-      },
-      {
-        "id": 6,
-        "title": "DOM и Взаимодействие с Браузером",
-        "completed": false,
-        "lessons": [
-          {
-            "id": 1,
-            "title": "DOM: Дерево Элементов HTML Страницы",
-            "content": "",
-            "links": [],
-            "practice": [],
-            "theorycompl": 0,
-            "practicecompl": 0,
-            "status": 0
-          },
-          {
-            "id": 2,
-            "title": "Выбор Элементов: querySelector, getElementById",
-            "content": "",
-            "links": [],
-            "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
@@ -642,26 +186,595 @@
             "content": "",
             "links": [],
             "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
           },
           {
             "id": 4,
-            "title": "События: Клики, Вводы, Изменения",
+            "title": "События: Слушатели и Обработчики",
             "content": "",
             "links": [],
             "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
           },
           {
             "id": 5,
-            "title": "Проект: Интерактивный Список Дел",
+            "title": "Контрольная Точка: Создайте Интерактивный Список",
             "content": "",
             "links": [],
             "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Асинхронность: Работа с Задержками и Запросами",
+        "completed": false,
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Callbacks: Первый Способ Обработки Асинхронности",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 2,
+            "title": "Promises: Более Чистый Подход",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 3,
+            "title": "Async/Await: Современный Синтаксис",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 4,
+            "title": "Fetch API: Получение Данных с Сервера",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 5,
+            "title": "Контрольная Точка: Загрузите и Выведите Внешние Данные",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "ООП и Функциональное Программирование",
+        "completed": false,
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Классы и Конструкторы: Создание Шаблонов Объектов",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 2,
+            "title": "Наследование и Полиморфизм",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 3,
+            "title": "Замыкания: Функции внутри Функций",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 4,
+            "title": "Контекст this и Методы Bind, Call, Apply",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 5,
+            "title": "Контрольная Точка: Создайте Класс и Работайте с Наследованием",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Практические Проекты: От Теории к Коду",
+        "completed": false,
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Проект 1: Todo-приложение с Сохранением",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 2,
+            "title": "Проект 2: Погодное приложение с API",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 3,
+            "title": "Проект 3: Галерея с Фильтрацией",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          }
+        ]
+      }
+    ],
+    "id": 1764389026374
+  },
+  {
+    "title": "C++: От Основ к Практическому Мастерству",
+    "lessonsCount": 28,
+    "progress": 0,
+    "modules": [
+      {
+        "id": 1,
+        "title": "Фундамент: Понимание C++ и Его Парадигмы",
+        "completed": false,
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Большая картина: Что такое C++ и почему он существует",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 2,
+            "title": "Компиляция vs Интерпретация: Почему C++ быстрый",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 3,
+            "title": "Ваша первая программа: Hello World и структура кода",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 4,
+            "title": "Переменные и типы данных: Память как ящики с ярлыками",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 5,
+            "title": "Операторы и выражения: Математика в коде",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 6,
+            "title": "Контрольная точка 1: Написать калькулятор с пользовательским вводом",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Управление Потоком: Принятие Решений и Циклы",
+        "completed": false,
+        "lessons": [
+          {
+            "id": 1,
+            "title": "If-else и логика: Раскрытие пути в коде",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 2,
+            "title": "Switch-case: Эффективный выбор между вариантами",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 3,
+            "title": "Цикл for: Автоматизация повторяющихся задач",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 4,
+            "title": "Цикл while и do-while: Когда количество повторений неизвестно",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 5,
+            "title": "Контрольная точка 2: Написать программу угадывания числа",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Функции: Модульность и Переиспользование Кода",
+        "completed": false,
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Функции как черные ящики: Ввод, обработка, вывод",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 2,
+            "title": "Параметры и возвращаемые значения: Общение между функциями",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 3,
+            "title": "Область видимости: Где живут переменные",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 4,
+            "title": "Рекурсия: Функция, вызывающая саму себя",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 5,
+            "title": "Контрольная точка 3: Написать библиотеку математических функций",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Массивы и Строки: Работа с Коллекциями Данных",
+        "completed": false,
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Массивы: Организация данных в ряд",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 2,
+            "title": "Перебор массива: Цикл for и доступ к элементам",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 3,
+            "title": "Строки: Массивы символов и операции над ними",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 4,
+            "title": "Двумерные массивы: Матрицы и таблицы",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 5,
+            "title": "Контрольная точка 4: Написать сортировку и поиск в массиве",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Указатели и Память: Углубленное Управление Ресурсами",
+        "completed": false,
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Адреса памяти: Где хранятся данные в компьютере",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 2,
+            "title": "Указатели: Переменные, хранящие адреса",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 3,
+            "title": "Динамическое выделение памяти: new и delete",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 4,
+            "title": "Утечки памяти и как их избегать",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 5,
+            "title": "Контрольная точка 5: Написать динамическую структуру данных",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Объектно-Ориентированное Программирование: Организация Кода",
+        "completed": false,
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Классы и объекты: Создание собственных типов данных",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 2,
+            "title": "Конструкторы и деструкторы: Инициализация и очистка",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 3,
+            "title": "Инкапсуляция: Public, private, protected",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 4,
+            "title": "Наследование: Переиспользование структуры класса",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 5,
+            "title": "Полиморфизм: Один интерфейс, много реализаций",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 6,
+            "title": "Контрольная точка 6: Спроектировать иерархию классов для игры",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
@@ -670,45 +783,100 @@
       },
       {
         "id": 7,
-        "title": "Чтение и Отладка Чужого Кода",
+        "title": "STL: Стандартная Библиотека Шаблонов",
         "completed": false,
         "lessons": [
           {
             "id": 1,
-            "title": "Навигация по Структуре Проекта",
+            "title": "Контейнеры: Vector, list, map, set",
             "content": "",
             "links": [],
             "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
           },
           {
             "id": 2,
-            "title": "Понимание Модульной Архитектуры",
+            "title": "Итераторы: Навигация по контейнерам",
             "content": "",
             "links": [],
             "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
           },
           {
             "id": 3,
-            "title": "Использование Developer Tools для Отладки",
+            "title": "Алгоритмы: sort, find, transform и другие",
             "content": "",
             "links": [],
             "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
           },
           {
             "id": 4,
-            "title": "Стратегия: Метод Разбора Незнакомого Кода",
+            "title": "Контрольная точка 7: Написать приложение для работы с данными",
             "content": "",
             "links": [],
             "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Практический Проект: Интеграция Всех Концепций",
+        "completed": false,
+        "lessons": [
+          {
+            "id": 1,
+            "title": "Проектирование: Спецификация и архитектура",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 2,
+            "title": "Реализация: Написание основного функционала",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 3,
+            "title": "Тестирование и отладка приложения",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
+            "theorycompl": 0,
+            "practicecompl": 0,
+            "status": 0
+          },
+          {
+            "id": 4,
+            "title": "Финальный проект: Построить приложение управления проектами",
+            "content": "",
+            "links": [],
+            "practice": [],
+            "selectedwords": [],
             "theorycompl": 0,
             "practicecompl": 0,
             "status": 0
@@ -716,6 +884,6 @@
         ]
       }
     ],
-    "id": 1764270936891
+    "id": 1764390540415
   }
 ]

@@ -90,6 +90,17 @@ class JsonFormatter {
     return str.replace(/className="[^"]*"/g, '');
   }
 
+  replaceTripleBackticksWithCodeTags(str) {
+  // Заменяем ```language\n...``` на <code>...</code>
+  return str.replace(/```([^\n]*)\n([\s\S]*?)```/g, (match, language, code) => {
+    // Убираем лишние переносы и экранируем кавычки внутри кода
+    const cleanedCode = code
+      .replace(/\n\$/, '') // Убираем последний перенос, если есть
+      .replace(/"/g, '\\"'); // Экранируем кавычки
+    return `<code>${cleanedCode}</code>`;
+  });
+}
+
   parse() {
     let jsonString = this.extractJsonString();
     if (!jsonString) throw new Error("JSON не найден");
@@ -99,7 +110,7 @@ class JsonFormatter {
     jsonString = this.removeJSXReturn(jsonString);
     jsonString = this.removeReactProps(jsonString);
     jsonString = this.replaceInnerDoubleQuotesLessonText(jsonString);
-
+jsonString = this.replaceTripleBackticksWithCodeTags(jsonString);
 
     try {
       console.log(jsonString);
@@ -114,7 +125,7 @@ class JsonFormatter {
         .replace(/"""/g, '"')
         .replace(/(?<!\\)"/g, '\\"');
 
-      console.log("💥 Desperate fix:", desperateFix);
+      console.log("Desperate fix:", desperateFix);
       return JSON.parse(desperateFix);
     }
   }

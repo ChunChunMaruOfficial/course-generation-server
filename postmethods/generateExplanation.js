@@ -1,9 +1,10 @@
 const prompts = require('../data/shortcourse.json');
 const handleGenerate = require('./handleGenerate')
 const fs = require('fs');
-let courses = JSON.parse(fs.readFileSync('data/courses.json', 'utf-8'));
 
 async function generateExplanation  (req, res) {
+    let courses = JSON.parse(fs.readFileSync('data/courses.json', 'utf-8'));
+    
     const result = await handleGenerate(prompts.newwordpromt + req.body.topic);
     
     lesson.explanations.push(result)

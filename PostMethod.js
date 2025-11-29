@@ -6,6 +6,8 @@ const generateLesson = require('./postmethods/generateLesson')
 const generatePractice = require('./postmethods/generatePractice')
 const generateQuestions = require('./postmethods/generateQuestions')
 const getLesson = require('./postmethods/getLesson')
+const getGuestCourses = require('./postmethods/getGuestCourses')
+
 
 function POSTmethod(req, res) {
     switch (req.path) {
@@ -35,6 +37,10 @@ function POSTmethod(req, res) {
             break;
         case '/registration':
             registration(req, res)
+            break;
+        case '/getGuestCourses':
+            getGuestCourses(req, res)
+            
             break;
     }
 }

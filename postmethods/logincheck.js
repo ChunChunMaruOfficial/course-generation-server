@@ -1,11 +1,12 @@
 const fs = require('fs');
-const users = JSON.parse(fs.readFileSync('data/users.json', 'utf-8'));
+
 const bcrypt = require('bcrypt');
 
 async function logincheck(req, res) {
+    const users = JSON.parse(fs.readFileSync('data/users.json', 'utf-8'));
     console.log(req.body);
 
-    const user = users.find(v => v.email == req.body.email)
+    const user = users.find(v => v.mail == req.body.mail)
     if (!user) {
         return res.status(401).json({ answer: 'вы не зарегистрированы' });
     }
@@ -14,7 +15,9 @@ async function logincheck(req, res) {
     if (!isPasswordValid) {
         return res.status(401).json({ answer: 'пароль неверный' });
     }
-    return res.status(200).json({ answer: 'Успешный вход', user: { id: user.id, email: user.email } });
+
+    users.find(v => v.mail == req.body.mail).courses = req.body.courses
+    return res.status(200).json({ answer: 'Успешный вход', user: { id: user.id, mail: user.mail, date: user.date, tokens: user.tokens, courses: user.courses  } });
 }
 
 module.exports = logincheck;

@@ -1,0 +1,869 @@
+[
+  {
+    "id": "f13b4f6f-f7ba-48bc-9dfd-e2e2be42f9e5",
+    "courses": [
+      {
+        "title": "JavaScript: Быстрый Старт к Практическому Мастерству",
+        "lessonsCount": 28,
+        "progress": 0,
+        "modules": [
+          {
+            "id": 1,
+            "title": "Основы JavaScript: Ментальная Модель",
+            "completed": false,
+            "lessons": [
+              {
+                "id": 1,
+                "title": "Что такое JavaScript: Большая Картина",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 2,
+                "title": "Переменные и Типы Данных: Контейнеры для Информации",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 3,
+                "title": "Операторы и Логика: Принятие Решений",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 4,
+                "title": "Функции: Переиспользуемые Блоки Кода",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 5,
+                "title": "Контрольная Точка: Напишите Простой Калькулятор",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Работа с Данными: Массивы и Объекты",
+            "completed": false,
+            "lessons": [
+              {
+                "id": 1,
+                "title": "Массивы: Списки и Итерация",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 2,
+                "title": "Методы Массивов: map, filter, reduce",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 3,
+                "title": "Объекты: Организация Сложных Данных",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 4,
+                "title": "Деструктуризация и Спред-оператор",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 5,
+                "title": "Контрольная Точка: Обработайте Набор Данных",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "DOM и Взаимодействие с Веб-страницей",
+            "completed": false,
+            "lessons": [
+              {
+                "id": 1,
+                "title": "DOM: Дерево Элементов Страницы",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 2,
+                "title": "Выбор Элементов: querySelector и getElementById",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 3,
+                "title": "Изменение Содержимого и Стилей",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 4,
+                "title": "События: Слушатели и Обработчики",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 5,
+                "title": "Контрольная Точка: Создайте Интерактивный Список",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "title": "Асинхронность: Работа с Задержками и Запросами",
+            "completed": false,
+            "lessons": [
+              {
+                "id": 1,
+                "title": "Callbacks: Первый Способ Обработки Асинхронности",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 2,
+                "title": "Promises: Более Чистый Подход",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 3,
+                "title": "Async/Await: Современный Синтаксис",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 4,
+                "title": "Fetch API: Получение Данных с Сервера",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 5,
+                "title": "Контрольная Точка: Загрузите и Выведите Внешние Данные",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "title": "ООП и Функциональное Программирование",
+            "completed": false,
+            "lessons": [
+              {
+                "id": 1,
+                "title": "Классы и Конструкторы: Создание Шаблонов Объектов",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 2,
+                "title": "Наследование и Полиморфизм",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 3,
+                "title": "Замыкания: Функции внутри Функций",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 4,
+                "title": "Контекст this и Методы Bind, Call, Apply",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 5,
+                "title": "Контрольная Точка: Создайте Класс и Работайте с Наследованием",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "title": "Практические Проекты: От Теории к Коду",
+            "completed": false,
+            "lessons": [
+              {
+                "id": 1,
+                "title": "Проект 1: Todo-приложение с Сохранением",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 2,
+                "title": "Проект 2: Погодное приложение с API",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 3,
+                "title": "Проект 3: Галерея с Фильтрацией",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              }
+            ]
+          }
+        ],
+        "id": 1764389026374
+      },
+      {
+        "title": "C++: От Основ к Практическому Мастерству",
+        "lessonsCount": 28,
+        "progress": 0,
+        "modules": [
+          {
+            "id": 1,
+            "title": "Фундамент: Понимание C++ и Его Парадигмы",
+            "completed": false,
+            "lessons": [
+              {
+                "id": 1,
+                "title": "Большая картина: Что такое C++ и почему он существует",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 2,
+                "title": "Компиляция vs Интерпретация: Почему C++ быстрый",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 3,
+                "title": "Ваша первая программа: Hello World и структура кода",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 4,
+                "title": "Переменные и типы данных: Память как ящики с ярлыками",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 5,
+                "title": "Операторы и выражения: Математика в коде",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 6,
+                "title": "Контрольная точка 1: Написать калькулятор с пользовательским вводом",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "title": "Управление Потоком: Принятие Решений и Циклы",
+            "completed": false,
+            "lessons": [
+              {
+                "id": 1,
+                "title": "If-else и логика: Раскрытие пути в коде",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 2,
+                "title": "Switch-case: Эффективный выбор между вариантами",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 3,
+                "title": "Цикл for: Автоматизация повторяющихся задач",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 4,
+                "title": "Цикл while и do-while: Когда количество повторений неизвестно",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 5,
+                "title": "Контрольная точка 2: Написать программу угадывания числа",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "Функции: Модульность и Переиспользование Кода",
+            "completed": false,
+            "lessons": [
+              {
+                "id": 1,
+                "title": "Функции как черные ящики: Ввод, обработка, вывод",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 2,
+                "title": "Параметры и возвращаемые значения: Общение между функциями",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 3,
+                "title": "Область видимости: Где живут переменные",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 4,
+                "title": "Рекурсия: Функция, вызывающая саму себя",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 5,
+                "title": "Контрольная точка 3: Написать библиотеку математических функций",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "title": "Массивы и Строки: Работа с Коллекциями Данных",
+            "completed": false,
+            "lessons": [
+              {
+                "id": 1,
+                "title": "Массивы: Организация данных в ряд",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 2,
+                "title": "Перебор массива: Цикл for и доступ к элементам",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 3,
+                "title": "Строки: Массивы символов и операции над ними",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 4,
+                "title": "Двумерные массивы: Матрицы и таблицы",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 5,
+                "title": "Контрольная точка 4: Написать сортировку и поиск в массиве",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "title": "Указатели и Память: Углубленное Управление Ресурсами",
+            "completed": false,
+            "lessons": [
+              {
+                "id": 1,
+                "title": "Адреса памяти: Где хранятся данные в компьютере",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 2,
+                "title": "Указатели: Переменные, хранящие адреса",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 3,
+                "title": "Динамическое выделение памяти: new и delete",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 4,
+                "title": "Утечки памяти и как их избегать",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 5,
+                "title": "Контрольная точка 5: Написать динамическую структуру данных",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "title": "Объектно-Ориентированное Программирование: Организация Кода",
+            "completed": false,
+            "lessons": [
+              {
+                "id": 1,
+                "title": "Классы и объекты: Создание собственных типов данных",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 2,
+                "title": "Конструкторы и деструкторы: Инициализация и очистка",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 3,
+                "title": "Инкапсуляция: Public, private, protected",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 4,
+                "title": "Наследование: Переиспользование структуры класса",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 5,
+                "title": "Полиморфизм: Один интерфейс, много реализаций",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 6,
+                "title": "Контрольная точка 6: Спроектировать иерархию классов для игры",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "title": "STL: Стандартная Библиотека Шаблонов",
+            "completed": false,
+            "lessons": [
+              {
+                "id": 1,
+                "title": "Контейнеры: Vector, list, map, set",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 2,
+                "title": "Итераторы: Навигация по контейнерам",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 3,
+                "title": "Алгоритмы: sort, find, transform и другие",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 4,
+                "title": "Контрольная точка 7: Написать приложение для работы с данными",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "title": "Практический Проект: Интеграция Всех Концепций",
+            "completed": false,
+            "lessons": [
+              {
+                "id": 1,
+                "title": "Проектирование: Спецификация и архитектура",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 2,
+                "title": "Реализация: Написание основного функционала",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 3,
+                "title": "Тестирование и отладка приложения",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              },
+              {
+                "id": 4,
+                "title": "Финальный проект: Построить приложение управления проектами",
+                "content": "",
+                "links": [],
+                "practice": [],
+                "selectedwords": [],
+                "theorycompl": 0,
+                "practicecompl": 0,
+                "status": 0
+              }
+            ]
+          }
+        ],
+        "id": 1764390540415
+      }
+    ]
+  }
+]
